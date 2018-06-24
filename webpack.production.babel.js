@@ -6,7 +6,7 @@ export default {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    filename: './docs/script_small.js', /* 106 KiB */
+    filename: './docs/script.js', /* 106 KiB */
     path: resolve('.'),
   },
   module: {
