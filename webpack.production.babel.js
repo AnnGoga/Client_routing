@@ -1,11 +1,12 @@
-import {resolve} from 'path';
+import { resolve } from 'path';
+
 export default {
   mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx'],
   },
   output: {
-    filename: './docs/script.js', /* 106 KiB */
+    filename: './docs/script_small.js', /* 106 KiB */
     path: resolve('.'),
   },
   module: {
