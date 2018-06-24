@@ -1,10 +1,9 @@
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import Counter from './Counter';
-import Counter_2 from './Counter_2';
 import Map from './Map';
 import Gallery from './Gallery';
-import Calendar from './Calendar';
-import Trendino from './Trend';
+import Reviews from './Reviews';
+import Datapickerz from './Datapickerz';
 import React, { Component as C } from 'react';
 import { render as r } from 'react-dom';
 import moment from 'moment';
@@ -16,35 +15,28 @@ const Content = () => (
     <Switch>
       <Route exact path="/" component={Map} />
       <Route path="/gallery" component={Gallery} />
-      <Route path="/counter" component={Counter} />
-      <Route path="/calendar" component={Calendar} />
-      <Route path="/trend" component={Trendino} />
+      <Route path="/reviews" component={Reviews} />
+      <Route path="/datapickerz" component={Datapickerz} />
     </Switch>
   </main>
 );
 
-
 const Menu = () => (
-	<header>
-	<nav>
-	<ul>
-	<li><Link to="/">Карта</Link></li>
-	<li><Link to="/gallery">Галерея</Link></li>
-	<li><Link to="/counter">Liker</Link></li>
-	<li><Link to="/calendar">Material-UI</Link></li>
-	<li><Link to="/trend">Trend</Link></li>
-	</ul>
-	</nav>
-	</header>
+  <header>
+    <ul>
+      <li><Link to="/">Карта</Link></li>
+      <li><Link to="/gallery">Галерея</Link></li>
+      <li><Link to="/reviews">Отзывы</Link></li>
+      <li><Link to="/datapickerz">DataPicker</Link></li>
+    </ul>
+  </header>
 );
 
 const App = () => (
   <div><Menu /><Content />
-  </div>
-);
-
+  </div>);
 
 r(
-<BrowserRouter><MuiThemeProvider><App /></MuiThemeProvider></BrowserRouter>,
-document.querySelector('.cont'),
+  <BrowserRouter><MuiThemeProvider><App /></MuiThemeProvider></BrowserRouter>,
+  document.querySelector('.cont'),
 );
